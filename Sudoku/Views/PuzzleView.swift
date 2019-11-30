@@ -10,7 +10,28 @@ import SwiftUI
 
 struct PuzzleView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            VStack {
+                HStack {
+                    BlockView()
+                    BlockView()
+                    BlockView()
+                }
+                HStack {
+                    BlockView()
+                    BlockView()
+                    BlockView()
+                }
+                HStack {
+                    BlockView()
+                    BlockView()
+                    BlockView()
+                }
+            }
+            .frame(width: proxy.size.width,
+                   height: proxy.size.width,
+                   alignment: .center)
+        }
     }
 }
 

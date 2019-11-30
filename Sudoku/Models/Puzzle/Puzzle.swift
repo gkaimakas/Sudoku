@@ -78,10 +78,12 @@ public struct Puzzle {
     init(raw: String) {
         assert(raw.count == 81)
         cells = Self.decode(raw: raw)
+            .sorted(by: { $0.position.order < $1.position.order })
     }
     
     init(cells: [Cell]) {
         self.cells = cells
+            .sorted(by: { $0.position.order < $1.position.order })
     }
     
     func cell(at position: CellPosition) -> Cell {
@@ -117,166 +119,16 @@ public struct Puzzle {
     }
 }
 
-extension Puzzle {
-    public struct Block {
-        public let position: BlockPosition
-        public let cells: [Cell]
-        
-        public var isSolved: Bool {
-            solvedCells.count == 0
-        }
-        
-        public var isValidSolution: Bool {
-            solvedCells.compactMap(\.state.solution).set.count == solvedCells.compactMap(\.state.solution).count
-        }
-        
-        public var isOpenSingle: Bool {
-            unsolvedCells.count == 1
-        }
-        
-        public var solvedCells: [Cell] {
-            cells.filter(\.isSolved)
-        }
-        
-        public var unsolvedCells: [Cell] {
-            cells.filter(\.isNotSolved)
-        }
-        
-        public var missingSolutions: [Int] {
-            (1...9)
-                .map(\.self)
-                .set
-                .subtracting(cells.compactMap(\.state.solution).set)
-                .array
-                .sorted()
-        }
-        
-        public init(position: BlockPosition, cells: [Cell]) {
-            self.position = position
-            self.cells = cells
-        }
-        
-        public func contains(solution: Int) -> Bool {
-            missingSolutions.contains(solution) == false
-        }
-        
-        public func contains(cell: Cell) -> Bool {
-            cells.contains(where: { $0.position == cell.position })
-        }
-    }
-    
-    public struct Row {
-        public let index: RowIndex
-        public let cells: [Cell]
-        
-        public var isSolved: Bool {
-            solvedCells.count == cells.count
-        }
-        
-        public var isValidRow: Bool {
-            cells.map(\.position.row.value)
-                .reduce(true, { $0 && $1 == index.value })
-        }
-        
-        public var isValidSolution: Bool {
-            solvedCells.compactMap(\.state.solution).set.count == solvedCells.compactMap(\.state.solution).count
-        }
-        
-        public var isOpenSingle: Bool {
-            unsolvedCells.count == 1
-        }
-        
-        public var solvedCells: [Cell] {
-            cells.filter(\.isSolved)
-        }
-        
-        public var unsolvedCells: [Cell] {
-            cells.filter(\.isNotSolved)
-        }
-        
-        public var missingSolutions: [Int] {
-            (1...9)
-                .map(\.self)
-                .set
-                .subtracting(cells.compactMap(\.state.solution).set)
-                .array
-                .sorted()
-        }
-        
-        public init(index: RowIndex, cells: [Cell]) {
-            self.index = index
-            self.cells = cells
-        }
-        
-        public func contains(solution: Int) -> Bool {
-            missingSolutions.contains(solution) == false
-        }
-    }
-    
-    public struct Column {
-        public let index: ColumnIndex
-        public let cells: [Cell]
-        
-        public var isSolved: Bool {
-            solvedCells.count == 0
-        }
-        
-        public var isValidColumn: Bool {
-            cells.map(\.position.column.value)
-                .reduce(true, { $0 && $1 == index.value })
-        }
-        
-        public var isValidSolution: Bool {
-            solvedCells.compactMap(\.state.solution).set.count == solvedCells.compactMap(\.state.solution).count
-        }
-        
-        public var isOpenSingle: Bool {
-            unsolvedCells.count == 1
-        }
-        
-        public var solvedCells: [Cell] {
-            cells.filter(\.isSolved)
-        }
-        public var unsolvedCells: [Cell] {
-            cells.filter(\.isNotSolved)
-        }
-        
-        public var missingSolutions: [Int] {
-            (1...9)
-                .map(\.self)
-                .set
-                .subtracting(cells.compactMap(\.state.solution).set)
-                .array
-                .sorted()
-        }
-        
-        public init(index: ColumnIndex, cells: [Cell]) {
-            self.index = index
-            self.cells = cells
-        }
-        
-        public func contains(solution: Int) -> Bool {
-            missingSolutions.contains(solution) == false
-        }
-    }
-}
-
 extension Puzzle: Equatable {
     public static func ==(lhs: Puzzle, rhs: Puzzle) -> Bool {
         lhs.cells == rhs.cells
     }
 }
 
-extension Puzzle {
-    enum Lenses {
-        static func cell(position: CellPosition) -> Lens<Puzzle, Cell> {
-            Lens<Puzzle, Cell>(from: { $0.cell(at: position) }) { (cell, puzzle) -> Puzzle in
-                .init(cells: puzzle.cells.filter { $0.position != position } + [cell])
-            }
-        }
-        
-        static func state(position: CellPosition) -> Lens<Puzzle, Cell.State> {
-            cell(position:position) >>> Cell.Lenses.state
-        }
+extension Puzzle: CustomStringConvertible {
+    public var description: String {
+        cells
+            .map { $0.state.solution != nil ? "\($0.state.solution!)" : "." }
+            .joined()
     }
 }

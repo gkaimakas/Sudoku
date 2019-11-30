@@ -6,4 +6,18 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+public struct Style { }
+
+extension Style {
+    public struct Colors {
+        public static let background = Color("background", bundle: nil)
+    }
+}
+
+extension Style.Colors {
+    public struct Cell {
+        public static let background = Color("backgroundCell")
+    }
+}

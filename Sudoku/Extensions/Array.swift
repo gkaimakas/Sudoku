@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Array where Element: Hashable {
+    var set: Set<Element> {
+        Set(self)
+    }
+}

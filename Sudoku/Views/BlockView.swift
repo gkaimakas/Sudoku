@@ -10,7 +10,28 @@ import SwiftUI
 
 struct BlockView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            VStack(alignment: .center, spacing: 2) {
+                HStack(alignment: .center, spacing: 2) {
+                    CellView()
+                    CellView()
+                    CellView()
+                }
+                HStack(alignment: .center, spacing: 2) {
+                    CellView()
+                    CellView()
+                    CellView()
+                }
+                HStack(alignment: .center, spacing: 2) {
+                    CellView()
+                    CellView()
+                    CellView()
+                }
+            }
+            .frame(width: proxy.size.width,
+                   height: proxy.size.width,
+                   alignment: .center)
+        }
     }
 }
 

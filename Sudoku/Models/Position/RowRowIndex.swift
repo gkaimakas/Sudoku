@@ -7,6 +7,13 @@
 //
 
 public struct RowIndex {
+    public static func ==(lhs: RowIndex, rhs: Int) -> Bool {
+        lhs.value == rhs
+    }
+    
+    public static func ==(lhs: Int, rhs: RowIndex) -> Bool {
+        lhs == rhs.value
+    }
     
     public let value: Int
     

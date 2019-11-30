@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Set {
+    var array: Array<Element> {
+        Array(self)
+    }
+}

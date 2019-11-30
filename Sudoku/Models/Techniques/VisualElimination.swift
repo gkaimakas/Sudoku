@@ -6,4 +6,11 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-import Foundation
+extension Technique {
+    public static var visualElimination: Technique {
+        .init(name: .visualElimination) { _ in
+            nil
+            
+        }
+    }
+}

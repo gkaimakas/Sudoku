@@ -6,4 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-import Foundation
+infix operator |>: ForwardApplication
+
+public func |> <A, B>(a: A, f: (A) -> B) -> B {
+  return f(a)
+}

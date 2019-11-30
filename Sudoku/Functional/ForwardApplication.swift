@@ -6,4 +6,6 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-import Foundation
+precedencegroup ForwardApplication {
+  associativity: left
+}

@@ -10,12 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        PuzzleView()
+            .background(Style.Colors.background)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ForEach(ColorScheme.allCases, id: \.self) { scheme in
+            ContentView()
+                .environment(\.colorScheme, scheme)
+        }
+        
+        
     }
 }

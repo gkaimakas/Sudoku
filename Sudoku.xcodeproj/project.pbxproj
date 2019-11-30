@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,41 @@
 		1346EAF5239275CC005BCD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1346EAF3239275CC005BCD53 /* LaunchScreen.storyboard */; };
 		1346EB00239275CC005BCD53 /* SudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EAFF239275CC005BCD53 /* SudokuTests.swift */; };
 		1346EB0B239275CC005BCD53 /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB0A239275CC005BCD53 /* SudokuUITests.swift */; };
+		1346EB1A239275E6005BCD53 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB19239275E6005BCD53 /* Cell.swift */; };
+		1346EB1F23927610005BCD53 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB1E23927610005BCD53 /* Puzzle.swift */; };
+		1346EB212392767E005BCD53 /* CellPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB202392767E005BCD53 /* CellPosition.swift */; };
+		1346EB24239277AA005BCD53 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB23239277AA005BCD53 /* Pipe.swift */; };
+		1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB2523927845005BCD53 /* ForwardApplication.swift */; };
+		1346EB2823927881005BCD53 /* ForwardCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB2723927881005BCD53 /* ForwardCompose.swift */; };
+		1346EB2A239278AD005BCD53 /* ForwardComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB29239278AD005BCD53 /* ForwardComposition.swift */; };
+		1346EB2D23927A56005BCD53 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB2C23927A56005BCD53 /* Curry.swift */; };
+		1346EB2F23927D09005BCD53 /* Technique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB2E23927D09005BCD53 /* Technique.swift */; };
+		1346EB34239282BD005BCD53 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB33239282BD005BCD53 /* CellView.swift */; };
+		1346EB3623928489005BCD53 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3523928488005BCD53 /* BlockView.swift */; };
+		1346EB382392850C005BCD53 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB372392850C005BCD53 /* PuzzleView.swift */; };
+		1346EB3A23928804005BCD53 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3923928804005BCD53 /* Style.swift */; };
+		1346EB3D23928E30005BCD53 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3C23928E30005BCD53 /* Sequence.swift */; };
+		1346EB4023929222005BCD53 /* RowRowIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3F23929222005BCD53 /* RowRowIndex.swift */; };
+		1346EB4223929279005BCD53 /* ColumnIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB4123929279005BCD53 /* ColumnIndex.swift */; };
+		1346EB5723929FB4005BCD53 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 1346EB5623929FB4005BCD53 /* Quick */; };
+		1346EB5923929FB4005BCD53 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 1346EB5823929FB4005BCD53 /* Nimble */; };
+		1346EB6323929FD2005BCD53 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 1346EB6223929FD2005BCD53 /* Quick */; };
+		1346EB6523929FD2005BCD53 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 1346EB6423929FD2005BCD53 /* Nimble */; };
+		1346EB672392A061005BCD53 /* SudokuParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB662392A061005BCD53 /* SudokuParserSpec.swift */; };
+		1346EB692392A165005BCD53 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB682392A165005BCD53 /* String.swift */; };
+		1346EB6B2392A1DA005BCD53 /* StringExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB6A2392A1DA005BCD53 /* StringExtensionsSpec.swift */; };
+		1346EB712392B5CE005BCD53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB702392B5CE005BCD53 /* Array.swift */; };
+		1346EB732392B5EC005BCD53 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB722392B5EC005BCD53 /* Set.swift */; };
+		1346EB752392B832005BCD53 /* PuzzleRowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB742392B832005BCD53 /* PuzzleRowSpec.swift */; };
+		1346EB782392BEFB005BCD53 /* OpenSingles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB772392BEFB005BCD53 /* OpenSingles.swift */; };
+		1346EB7A2392BFE9005BCD53 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB792392BFE9005BCD53 /* Lens.swift */; };
+		1346EB7C2392CA6E005BCD53 /* VisualElimination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */; };
+		1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB7D2392D130005BCD53 /* BlockPosition.swift */; };
+		1346EB812392DBBE005BCD53 /* OpenSingleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */; };
+		1346EB842392E06A005BCD53 /* Puzzle+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB832392E06A005BCD53 /* Puzzle+Row.swift */; };
+		1346EB862392E090005BCD53 /* Puzzle+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB852392E090005BCD53 /* Puzzle+Block.swift */; };
+		1346EB882392E0C0005BCD53 /* Puzzle+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */; };
+		1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +84,37 @@
 		1346EB06239275CC005BCD53 /* SudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1346EB0A239275CC005BCD53 /* SudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITests.swift; sourceTree = "<group>"; };
 		1346EB0C239275CC005BCD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1346EB19239275E6005BCD53 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		1346EB1E23927610005BCD53 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		1346EB202392767E005BCD53 /* CellPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPosition.swift; sourceTree = "<group>"; };
+		1346EB23239277AA005BCD53 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		1346EB2523927845005BCD53 /* ForwardApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardApplication.swift; sourceTree = "<group>"; };
+		1346EB2723927881005BCD53 /* ForwardCompose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardCompose.swift; sourceTree = "<group>"; };
+		1346EB29239278AD005BCD53 /* ForwardComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardComposition.swift; sourceTree = "<group>"; };
+		1346EB2C23927A56005BCD53 /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		1346EB2E23927D09005BCD53 /* Technique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technique.swift; sourceTree = "<group>"; };
+		1346EB33239282BD005BCD53 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		1346EB3523928488005BCD53 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		1346EB372392850C005BCD53 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		1346EB3923928804005BCD53 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		1346EB3C23928E30005BCD53 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		1346EB3F23929222005BCD53 /* RowRowIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowRowIndex.swift; sourceTree = "<group>"; };
+		1346EB4123929279005BCD53 /* ColumnIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnIndex.swift; sourceTree = "<group>"; };
+		1346EB662392A061005BCD53 /* SudokuParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuParserSpec.swift; sourceTree = "<group>"; };
+		1346EB682392A165005BCD53 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		1346EB6A2392A1DA005BCD53 /* StringExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsSpec.swift; sourceTree = "<group>"; };
+		1346EB702392B5CE005BCD53 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		1346EB722392B5EC005BCD53 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		1346EB742392B832005BCD53 /* PuzzleRowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleRowSpec.swift; sourceTree = "<group>"; };
+		1346EB772392BEFB005BCD53 /* OpenSingles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingles.swift; sourceTree = "<group>"; };
+		1346EB792392BFE9005BCD53 /* Lens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
+		1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualElimination.swift; sourceTree = "<group>"; };
+		1346EB7D2392D130005BCD53 /* BlockPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockPosition.swift; sourceTree = "<group>"; };
+		1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingleSpec.swift; sourceTree = "<group>"; };
+		1346EB832392E06A005BCD53 /* Puzzle+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Row.swift"; sourceTree = "<group>"; };
+		1346EB852392E090005BCD53 /* Puzzle+Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Block.swift"; sourceTree = "<group>"; };
+		1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Column.swift"; sourceTree = "<group>"; };
+		1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Lenses.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1346EB5723929FB4005BCD53 /* Quick in Frameworks */,
+				1346EB5923929FB4005BCD53 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1346EB6323929FD2005BCD53 /* Quick in Frameworks */,
+				1346EB6523929FD2005BCD53 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +153,7 @@
 				1346EAFE239275CC005BCD53 /* SudokuTests */,
 				1346EB09239275CC005BCD53 /* SudokuUITests */,
 				1346EAE6239275CB005BCD53 /* Products */,
+				1346EB5523929FB4005BCD53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +170,10 @@
 		1346EAE7239275CB005BCD53 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				1346EB3B23928E26005BCD53 /* Extensions */,
+				1346EB30239282A4005BCD53 /* Views */,
+				1346EB22239277A1005BCD53 /* Functional */,
+				1346EB18239275DB005BCD53 /* Models */,
 				1346EAE8239275CB005BCD53 /* AppDelegate.swift */,
 				1346EAEA239275CB005BCD53 /* SceneDelegate.swift */,
 				1346EAEC239275CB005BCD53 /* ContentView.swift */,
@@ -121,8 +196,12 @@
 		1346EAFE239275CC005BCD53 /* SudokuTests */ = {
 			isa = PBXGroup;
 			children = (
+				1346EB7F2392DBAA005BCD53 /* Techniques */,
 				1346EAFF239275CC005BCD53 /* SudokuTests.swift */,
 				1346EB01239275CC005BCD53 /* Info.plist */,
+				1346EB662392A061005BCD53 /* SudokuParserSpec.swift */,
+				1346EB6A2392A1DA005BCD53 /* StringExtensionsSpec.swift */,
+				1346EB742392B832005BCD53 /* PuzzleRowSpec.swift */,
 			);
 			path = SudokuTests;
 			sourceTree = "<group>";
@@ -134,6 +213,100 @@
 				1346EB0C239275CC005BCD53 /* Info.plist */,
 			);
 			path = SudokuUITests;
+			sourceTree = "<group>";
+		};
+		1346EB18239275DB005BCD53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB822392E05A005BCD53 /* Puzzle */,
+				1346EB762392BED5005BCD53 /* Techniques */,
+				1346EB19239275E6005BCD53 /* Cell.swift */,
+				1346EB3E23929218005BCD53 /* Position */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1346EB22239277A1005BCD53 /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB23239277AA005BCD53 /* Pipe.swift */,
+				1346EB2723927881005BCD53 /* ForwardCompose.swift */,
+				1346EB2C23927A56005BCD53 /* Curry.swift */,
+				1346EB2523927845005BCD53 /* ForwardApplication.swift */,
+				1346EB29239278AD005BCD53 /* ForwardComposition.swift */,
+				1346EB792392BFE9005BCD53 /* Lens.swift */,
+			);
+			path = Functional;
+			sourceTree = "<group>";
+		};
+		1346EB30239282A4005BCD53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB33239282BD005BCD53 /* CellView.swift */,
+				1346EB3523928488005BCD53 /* BlockView.swift */,
+				1346EB372392850C005BCD53 /* PuzzleView.swift */,
+				1346EB3923928804005BCD53 /* Style.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1346EB3B23928E26005BCD53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB3C23928E30005BCD53 /* Sequence.swift */,
+				1346EB682392A165005BCD53 /* String.swift */,
+				1346EB702392B5CE005BCD53 /* Array.swift */,
+				1346EB722392B5EC005BCD53 /* Set.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1346EB3E23929218005BCD53 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB7D2392D130005BCD53 /* BlockPosition.swift */,
+				1346EB202392767E005BCD53 /* CellPosition.swift */,
+				1346EB3F23929222005BCD53 /* RowRowIndex.swift */,
+				1346EB4123929279005BCD53 /* ColumnIndex.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		1346EB5523929FB4005BCD53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1346EB762392BED5005BCD53 /* Techniques */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB2E23927D09005BCD53 /* Technique.swift */,
+				1346EB772392BEFB005BCD53 /* OpenSingles.swift */,
+				1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */,
+			);
+			path = Techniques;
+			sourceTree = "<group>";
+		};
+		1346EB7F2392DBAA005BCD53 /* Techniques */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */,
+			);
+			path = Techniques;
+			sourceTree = "<group>";
+		};
+		1346EB822392E05A005BCD53 /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				1346EB1E23927610005BCD53 /* Puzzle.swift */,
+				1346EB832392E06A005BCD53 /* Puzzle+Row.swift */,
+				1346EB852392E090005BCD53 /* Puzzle+Block.swift */,
+				1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */,
+				1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */,
+			);
+			path = Puzzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +325,8 @@
 			dependencies = (
 			);
 			name = Sudoku;
+			packageProductDependencies = (
+			);
 			productName = Sudoku;
 			productReference = 1346EAE5239275CB005BCD53 /* Sudoku.app */;
 			productType = "com.apple.product-type.application";
@@ -167,9 +342,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				1346EB5B23929FBA005BCD53 /* PBXTargetDependency */,
+				1346EB5D23929FBA005BCD53 /* PBXTargetDependency */,
 				1346EAFD239275CC005BCD53 /* PBXTargetDependency */,
 			);
 			name = SudokuTests;
+			packageProductDependencies = (
+				1346EB5623929FB4005BCD53 /* Quick */,
+				1346EB5823929FB4005BCD53 /* Nimble */,
+			);
 			productName = SudokuTests;
 			productReference = 1346EAFB239275CC005BCD53 /* SudokuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -185,9 +366,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				1346EB5F23929FCC005BCD53 /* PBXTargetDependency */,
+				1346EB6123929FCC005BCD53 /* PBXTargetDependency */,
 				1346EB08239275CC005BCD53 /* PBXTargetDependency */,
 			);
 			name = SudokuUITests;
+			packageProductDependencies = (
+				1346EB6223929FD2005BCD53 /* Quick */,
+				1346EB6423929FD2005BCD53 /* Nimble */,
+			);
 			productName = SudokuUITests;
 			productReference = 1346EB06239275CC005BCD53 /* SudokuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -224,6 +411,10 @@
 				Base,
 			);
 			mainGroup = 1346EADC239275CB005BCD53;
+			packageReferences = (
+				1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */,
+				1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 1346EAE6239275CB005BCD53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,9 +458,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1346EB382392850C005BCD53 /* PuzzleView.swift in Sources */,
+				1346EB4223929279005BCD53 /* ColumnIndex.swift in Sources */,
+				1346EB212392767E005BCD53 /* CellPosition.swift in Sources */,
+				1346EB782392BEFB005BCD53 /* OpenSingles.swift in Sources */,
+				1346EB842392E06A005BCD53 /* Puzzle+Row.swift in Sources */,
+				1346EB3623928489005BCD53 /* BlockView.swift in Sources */,
+				1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */,
+				1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */,
 				1346EAE9239275CB005BCD53 /* AppDelegate.swift in Sources */,
+				1346EB1A239275E6005BCD53 /* Cell.swift in Sources */,
+				1346EB24239277AA005BCD53 /* Pipe.swift in Sources */,
+				1346EB34239282BD005BCD53 /* CellView.swift in Sources */,
+				1346EB3D23928E30005BCD53 /* Sequence.swift in Sources */,
+				1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */,
+				1346EB1F23927610005BCD53 /* Puzzle.swift in Sources */,
+				1346EB7C2392CA6E005BCD53 /* VisualElimination.swift in Sources */,
+				1346EB2D23927A56005BCD53 /* Curry.swift in Sources */,
+				1346EB2A239278AD005BCD53 /* ForwardComposition.swift in Sources */,
+				1346EB882392E0C0005BCD53 /* Puzzle+Column.swift in Sources */,
+				1346EB862392E090005BCD53 /* Puzzle+Block.swift in Sources */,
 				1346EAEB239275CB005BCD53 /* SceneDelegate.swift in Sources */,
+				1346EB2823927881005BCD53 /* ForwardCompose.swift in Sources */,
+				1346EB3A23928804005BCD53 /* Style.swift in Sources */,
+				1346EB712392B5CE005BCD53 /* Array.swift in Sources */,
+				1346EB2F23927D09005BCD53 /* Technique.swift in Sources */,
+				1346EB692392A165005BCD53 /* String.swift in Sources */,
+				1346EB4023929222005BCD53 /* RowRowIndex.swift in Sources */,
 				1346EAED239275CB005BCD53 /* ContentView.swift in Sources */,
+				1346EB732392B5EC005BCD53 /* Set.swift in Sources */,
+				1346EB7A2392BFE9005BCD53 /* Lens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1346EB6B2392A1DA005BCD53 /* StringExtensionsSpec.swift in Sources */,
+				1346EB672392A061005BCD53 /* SudokuParserSpec.swift in Sources */,
 				1346EB00239275CC005BCD53 /* SudokuTests.swift in Sources */,
+				1346EB812392DBBE005BCD53 /* OpenSingleSpec.swift in Sources */,
+				1346EB752392B832005BCD53 /* PuzzleRowSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +523,22 @@
 			isa = PBXTargetDependency;
 			target = 1346EAE4239275CB005BCD53 /* Sudoku */;
 			targetProxy = 1346EB07239275CC005BCD53 /* PBXContainerItemProxy */;
+		};
+		1346EB5B23929FBA005BCD53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1346EB5A23929FBA005BCD53 /* Quick */;
+		};
+		1346EB5D23929FBA005BCD53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1346EB5C23929FBA005BCD53 /* Nimble */;
+		};
+		1346EB5F23929FCC005BCD53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1346EB5E23929FCC005BCD53 /* Quick */;
+		};
+		1346EB6123929FCC005BCD53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1346EB6023929FCC005BCD53 /* Nimble */;
 		};
 /* End PBXTargetDependency section */
 
@@ -594,6 +832,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1346EB5623929FB4005BCD53 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		1346EB5823929FB4005BCD53 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		1346EB5A23929FBA005BCD53 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		1346EB5C23929FBA005BCD53 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		1346EB5E23929FCC005BCD53 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		1346EB6023929FCC005BCD53 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		1346EB6223929FD2005BCD53 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB4F23929F40005BCD53 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		1346EB6423929FD2005BCD53 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346EB5223929F90005BCD53 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1346EADD239275CB005BCD53 /* Project object */;
 }

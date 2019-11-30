@@ -10,10 +10,10 @@ import Foundation
 
 public struct Technique {
     public let name: Name
-    public let apply: (Puzzle) -> Void
+    public let apply: (Puzzle) -> Transformation?
     
     public init(name: Name,
-                apply: @escaping (Puzzle) -> Void) {
+                apply: @escaping (Puzzle) -> Transformation?) {
         
         self.name = name
         self.apply = apply
@@ -22,7 +22,9 @@ public struct Technique {
 
 extension Technique {
     public enum Name {
-        case openSingles
+        case openSingleRow
+        case openSingleColumn
+        case openSingleBlock
         case visualElimination
         case loneSingles
         case hiddenSingles
@@ -38,68 +40,78 @@ extension Technique {
         case xyWing
         case uniqueRectangle
     }
+    
+    public struct Transformation {
+        let oldPuzzle: Puzzle
+        let newPuzzle: Puzzle
+        let technique: Technique
+        let position: CellPosition
+        
+        init(old: Puzzle,
+             new: Puzzle,
+             technique: Technique,
+             position: CellPosition) {
+            
+            self.oldPuzzle = old
+            self.newPuzzle = new
+            self.technique = technique
+            self.position = position
+        }
+    }
 }
 
 extension Technique {
-    public static var openSignles: Technique {
-        .init(name: .openSingles) { puzzle in
-            
-        }
-    }
     
-    public static var visualElimination: Technique {
-        .init(name: .visualElimination) { _ in }
-    }
     
     public static var loneSingles: Technique {
-        .init(name: .loneSingles) { _ in }
+        .init(name: .loneSingles) { _ in nil }
     }
     
     public static var hiddenSingles: Technique {
-        .init(name: .hiddenSingles) { _ in }
+        .init(name: .hiddenSingles) { _ in nil }
     }
     
     public static var nakedPairs: Technique {
-        .init(name: .nakedPairs) { _ in }
+        .init(name: .nakedPairs) { _ in nil }
     }
     
     public static var nakedTriplets: Technique {
-        .init(name: .nakedTriplets) { _ in }
+        .init(name: .nakedTriplets) { _ in nil }
     }
     
     public static var nakedQuads: Technique {
-        .init(name: .nakedQuads) { _ in }
+        .init(name: .nakedQuads) { _ in nil }
     }
     
     public static var omission: Technique {
-        .init(name: .omission) { _ in }
+        .init(name: .omission) { _ in nil }
     }
     
     public static var hiddenPairs: Technique {
-        .init(name: .hiddenPairs) { _ in }
+        .init(name: .hiddenPairs) { _ in nil }
     }
     
     public static var hiddenTriples: Technique {
-        .init(name: .hiddenTriples) { _ in }
+        .init(name: .hiddenTriples) { _ in nil }
     }
     
     public static var hiddenQuads: Technique {
-        .init(name: .hiddenQuads) { _ in }
+        .init(name: .hiddenQuads) { _ in nil }
     }
     
     public static var xWing: Technique {
-        .init(name: .xWing) { _ in }
+        .init(name: .xWing) { _ in nil }
     }
     
     public static var swordfish: Technique {
-        .init(name: .swordfish) { _ in }
+        .init(name: .swordfish) { _ in nil }
     }
     
     public static var xyWing: Technique {
-        .init(name: .xyWing) { _ in }
+        .init(name: .xyWing) { _ in nil }
     }
     
     public static var uniqueRectangle: Technique {
-        .init(name: .uniqueRectangle) { _ in }
+        .init(name: .uniqueRectangle) { _ in nil }
     }
 }
