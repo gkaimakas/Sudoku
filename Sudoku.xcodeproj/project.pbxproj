@@ -50,6 +50,7 @@
 		1346EB862392E090005BCD53 /* Puzzle+Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB852392E090005BCD53 /* Puzzle+Block.swift */; };
 		1346EB882392E0C0005BCD53 /* Puzzle+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */; };
 		1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */; };
+		136476352392F3E500DE6D9D /* VisualEliminationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		1346EB852392E090005BCD53 /* Puzzle+Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Block.swift"; sourceTree = "<group>"; };
 		1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Column.swift"; sourceTree = "<group>"; };
 		1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Lenses.swift"; sourceTree = "<group>"; };
+		136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEliminationSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */,
+				136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				1346EB672392A061005BCD53 /* SudokuParserSpec.swift in Sources */,
 				1346EB00239275CC005BCD53 /* SudokuTests.swift in Sources */,
 				1346EB812392DBBE005BCD53 /* OpenSingleSpec.swift in Sources */,
+				136476352392F3E500DE6D9D /* VisualEliminationSpec.swift in Sources */,
 				1346EB752392B832005BCD53 /* PuzzleRowSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

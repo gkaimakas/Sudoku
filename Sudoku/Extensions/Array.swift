@@ -13,3 +13,10 @@ extension Array where Element: Hashable {
         Set(self)
     }
 }
+
+extension Array where Element == Puzzle.Block {
+    func instancesOf(solution: Int) -> [Cell] {
+        flatMap { $0.solvedCells }
+            .filter { $0.state.solution == solution }
+    }
+}

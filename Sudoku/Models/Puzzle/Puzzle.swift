@@ -27,6 +27,10 @@ public struct Puzzle {
     
     let cells: [Cell]
     
+    var unsolvedCells: [Cell] {
+        cells.filter(\.isNotSolved)
+    }
+    
     var rows: [Row] {
         cells.map(\.position.row.value)
             .set
@@ -108,6 +112,24 @@ public struct Puzzle {
         }
         
         return block
+    }
+    
+    func neighbors(of block: Block) -> [Block] {
+        rowNeighbors(of: block) + columnNeighbors(of: block)
+    }
+    
+    func rowNeighbors(of block: Block) -> [Block] {
+        blocks
+            .filter { $0.position.row == block.position.row }
+            .filter { $0.position != block.position }
+            
+    }
+    
+    func columnNeighbors(of block: Block) -> [Block] {
+        blocks
+            .filter { $0.position.column == block.position.column }
+            .filter { $0.position != block.position }
+            
     }
     
     func instancesOf(solution: Int) -> Int {
