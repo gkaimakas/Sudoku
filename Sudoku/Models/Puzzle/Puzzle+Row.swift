@@ -17,6 +17,10 @@ extension Puzzle {
             solvedCells.count == cells.count
         }
         
+        public var isNotSolved: Bool {
+            !isSolved
+        }
+        
         public var isValidRow: Bool {
             cells.map(\.position.row.value)
                 .reduce(true, { $0 && $1 == index.value })
@@ -30,12 +34,39 @@ extension Puzzle {
             unsolvedCells.count == 1
         }
         
+        public var isHiddenSingle: Bool {
+            hiddenSingle != nil
+        }
+        
         public var solvedCells: [Cell] {
             cells.filter(\.isSolved)
         }
         
         public var unsolvedCells: [Cell] {
             cells.filter(\.isNotSolved)
+        }
+        
+        public var hiddenSingle: (Int, Cell)? {
+            var store: [Int: [Cell]] = [:]
+            unsolvedCells
+                .forEach { (cell) in
+                    if let candidates = cell.state.candidates {
+                        candidates
+                            .forEach { candidate in
+                                store[candidate] = (store[candidate] ?? []) + [cell]
+                        }
+                    }
+            }
+            
+            
+            
+            for (key, cells) in store {
+                if cells.count == 1 {
+                    return (key, cells[0])
+                }
+            }
+            
+            return nil
         }
         
         public var missingSolutions: [Int] {

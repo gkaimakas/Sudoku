@@ -55,6 +55,8 @@
 		136476392392F7BC00DE6D9D /* OpenSingleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */; };
 		1364763B2392F87300DE6D9D /* NakedSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364763A2392F87300DE6D9D /* NakedSingle.swift */; };
 		1364763D2393020E00DE6D9D /* NakedSingleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */; };
+		1364763F239309F500DE6D9D /* ΗiddenSingleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364763E239309F500DE6D9D /* ΗiddenSingleRow.swift */; };
+		1364764123930C4E00DE6D9D /* HiddenSingleRowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364764023930C4E00DE6D9D /* HiddenSingleRowSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingleBlock.swift; sourceTree = "<group>"; };
 		1364763A2392F87300DE6D9D /* NakedSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NakedSingle.swift; sourceTree = "<group>"; };
 		1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NakedSingleSpec.swift; sourceTree = "<group>"; };
+		1364763E239309F500DE6D9D /* ΗiddenSingleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ΗiddenSingleRow.swift"; sourceTree = "<group>"; };
+		1364764023930C4E00DE6D9D /* HiddenSingleRowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenSingleRowSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +302,7 @@
 				136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */,
 				1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */,
 				1364763A2392F87300DE6D9D /* NakedSingle.swift */,
+				1364763E239309F500DE6D9D /* ΗiddenSingleRow.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */,
 				136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */,
 				1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */,
+				1364764023930C4E00DE6D9D /* HiddenSingleRowSpec.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				1346EB212392767E005BCD53 /* CellPosition.swift in Sources */,
 				1346EB782392BEFB005BCD53 /* OpenSingleRow.swift in Sources */,
 				1346EB842392E06A005BCD53 /* Puzzle+Row.swift in Sources */,
+				1364763F239309F500DE6D9D /* ΗiddenSingleRow.swift in Sources */,
 				136476372392F79A00DE6D9D /* OpenSingleColumn.swift in Sources */,
 				1346EB3623928489005BCD53 /* BlockView.swift in Sources */,
 				1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */,
@@ -518,6 +525,7 @@
 				1346EB672392A061005BCD53 /* SudokuParserSpec.swift in Sources */,
 				1346EB00239275CC005BCD53 /* SudokuTests.swift in Sources */,
 				1346EB812392DBBE005BCD53 /* OpenSingleSpec.swift in Sources */,
+				1364764123930C4E00DE6D9D /* HiddenSingleRowSpec.swift in Sources */,
 				136476352392F3E500DE6D9D /* VisualEliminationSpec.swift in Sources */,
 				1346EB752392B832005BCD53 /* PuzzleRowSpec.swift in Sources */,
 			);

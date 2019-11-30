@@ -1,5 +1,5 @@
 //
-//  LoneSingles.swift
+//  HiddenSingle.swift
 //  Sudoku
 //
 //  Created by George Kaimakas on 30/11/19.
@@ -7,13 +7,11 @@
 //
 
 extension Technique {
-    public static var nakedSingle: Technique {
-        .init(name: .nakedSingle) { puzzle in
+    public static var hiddenSingleRow: Technique {
+        .init(name: .hiddenSingleRow) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
-            let loneSingles = updatedPuzzle.unsolvedCells.filter(\.isLoneSingle)
             
-            if let cell = loneSingles.first,
-                let solution = cell.state.candidates?.first {
+            if let (solution, cell) = updatedPuzzle.rows.filter(\.isNotSolved).filter(\.isHiddenSingle).first?.hiddenSingle {
                 
                 let result = Puzzle
                     .Lenses
@@ -22,7 +20,7 @@ extension Technique {
                 
                 return Transformation(old: updatedPuzzle,
                                       new: result.updateCandidates(),
-                                      technique: .nakedSingle,
+                                      technique: .hiddenSingleRow,
                                       position: cell.position)
             }
             
