@@ -28,6 +28,7 @@ extension Technique {
         case visualElimination
         case nakedSingle
         case hiddenSingleRow
+        case hiddenSingleColumn
         case nakedPairs
         case nakedTriplets
         case nakedQuads
