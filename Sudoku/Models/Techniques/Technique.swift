@@ -26,7 +26,7 @@ extension Technique {
         case openSingleColumn
         case openSingleBlock
         case visualElimination
-        case loneSingles
+        case nakedSingle
         case hiddenSingles
         case nakedPairs
         case nakedTriplets
@@ -61,11 +61,6 @@ extension Technique {
 }
 
 extension Technique {
-    
-    
-    public static var loneSingles: Technique {
-        .init(name: .loneSingles) { _ in nil }
-    }
     
     public static var hiddenSingles: Technique {
         .init(name: .hiddenSingles) { _ in nil }

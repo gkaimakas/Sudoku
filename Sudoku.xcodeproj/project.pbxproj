@@ -41,7 +41,7 @@
 		1346EB712392B5CE005BCD53 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB702392B5CE005BCD53 /* Array.swift */; };
 		1346EB732392B5EC005BCD53 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB722392B5EC005BCD53 /* Set.swift */; };
 		1346EB752392B832005BCD53 /* PuzzleRowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB742392B832005BCD53 /* PuzzleRowSpec.swift */; };
-		1346EB782392BEFB005BCD53 /* OpenSingles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB772392BEFB005BCD53 /* OpenSingles.swift */; };
+		1346EB782392BEFB005BCD53 /* OpenSingleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB772392BEFB005BCD53 /* OpenSingleRow.swift */; };
 		1346EB7A2392BFE9005BCD53 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB792392BFE9005BCD53 /* Lens.swift */; };
 		1346EB7C2392CA6E005BCD53 /* VisualElimination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */; };
 		1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB7D2392D130005BCD53 /* BlockPosition.swift */; };
@@ -51,6 +51,10 @@
 		1346EB882392E0C0005BCD53 /* Puzzle+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */; };
 		1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */; };
 		136476352392F3E500DE6D9D /* VisualEliminationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */; };
+		136476372392F79A00DE6D9D /* OpenSingleColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476362392F79A00DE6D9D /* OpenSingleColumn.swift */; };
+		136476392392F7BC00DE6D9D /* OpenSingleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */; };
+		1364763B2392F87300DE6D9D /* NakedSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364763A2392F87300DE6D9D /* NakedSingle.swift */; };
+		1364763D2393020E00DE6D9D /* NakedSingleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +111,7 @@
 		1346EB702392B5CE005BCD53 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		1346EB722392B5EC005BCD53 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		1346EB742392B832005BCD53 /* PuzzleRowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleRowSpec.swift; sourceTree = "<group>"; };
-		1346EB772392BEFB005BCD53 /* OpenSingles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingles.swift; sourceTree = "<group>"; };
+		1346EB772392BEFB005BCD53 /* OpenSingleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingleRow.swift; sourceTree = "<group>"; };
 		1346EB792392BFE9005BCD53 /* Lens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
 		1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualElimination.swift; sourceTree = "<group>"; };
 		1346EB7D2392D130005BCD53 /* BlockPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockPosition.swift; sourceTree = "<group>"; };
@@ -117,6 +121,10 @@
 		1346EB872392E0C0005BCD53 /* Puzzle+Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Column.swift"; sourceTree = "<group>"; };
 		1346EB892392E0E5005BCD53 /* Puzzle+Lenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Puzzle+Lenses.swift"; sourceTree = "<group>"; };
 		136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEliminationSpec.swift; sourceTree = "<group>"; };
+		136476362392F79A00DE6D9D /* OpenSingleColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingleColumn.swift; sourceTree = "<group>"; };
+		136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSingleBlock.swift; sourceTree = "<group>"; };
+		1364763A2392F87300DE6D9D /* NakedSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NakedSingle.swift; sourceTree = "<group>"; };
+		1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NakedSingleSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,8 +293,11 @@
 			isa = PBXGroup;
 			children = (
 				1346EB2E23927D09005BCD53 /* Technique.swift */,
-				1346EB772392BEFB005BCD53 /* OpenSingles.swift */,
+				1346EB772392BEFB005BCD53 /* OpenSingleRow.swift */,
+				136476362392F79A00DE6D9D /* OpenSingleColumn.swift */,
+				136476382392F7BC00DE6D9D /* OpenSingleBlock.swift */,
 				1346EB7B2392CA6E005BCD53 /* VisualElimination.swift */,
+				1364763A2392F87300DE6D9D /* NakedSingle.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 			children = (
 				1346EB802392DBBE005BCD53 /* OpenSingleSpec.swift */,
 				136476342392F3E500DE6D9D /* VisualEliminationSpec.swift */,
+				1364763C2393020E00DE6D9D /* NakedSingleSpec.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -464,8 +476,9 @@
 				1346EB382392850C005BCD53 /* PuzzleView.swift in Sources */,
 				1346EB4223929279005BCD53 /* ColumnIndex.swift in Sources */,
 				1346EB212392767E005BCD53 /* CellPosition.swift in Sources */,
-				1346EB782392BEFB005BCD53 /* OpenSingles.swift in Sources */,
+				1346EB782392BEFB005BCD53 /* OpenSingleRow.swift in Sources */,
 				1346EB842392E06A005BCD53 /* Puzzle+Row.swift in Sources */,
+				136476372392F79A00DE6D9D /* OpenSingleColumn.swift in Sources */,
 				1346EB3623928489005BCD53 /* BlockView.swift in Sources */,
 				1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */,
 				1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */,
@@ -475,6 +488,7 @@
 				1346EB34239282BD005BCD53 /* CellView.swift in Sources */,
 				1346EB3D23928E30005BCD53 /* Sequence.swift in Sources */,
 				1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */,
+				136476392392F7BC00DE6D9D /* OpenSingleBlock.swift in Sources */,
 				1346EB1F23927610005BCD53 /* Puzzle.swift in Sources */,
 				1346EB7C2392CA6E005BCD53 /* VisualElimination.swift in Sources */,
 				1346EB2D23927A56005BCD53 /* Curry.swift in Sources */,
@@ -488,6 +502,7 @@
 				1346EB2F23927D09005BCD53 /* Technique.swift in Sources */,
 				1346EB692392A165005BCD53 /* String.swift in Sources */,
 				1346EB4023929222005BCD53 /* RowRowIndex.swift in Sources */,
+				1364763B2392F87300DE6D9D /* NakedSingle.swift in Sources */,
 				1346EAED239275CB005BCD53 /* ContentView.swift in Sources */,
 				1346EB732392B5EC005BCD53 /* Set.swift in Sources */,
 				1346EB7A2392BFE9005BCD53 /* Lens.swift in Sources */,
@@ -498,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1364763D2393020E00DE6D9D /* NakedSingleSpec.swift in Sources */,
 				1346EB6B2392A1DA005BCD53 /* StringExtensionsSpec.swift in Sources */,
 				1346EB672392A061005BCD53 /* SudokuParserSpec.swift in Sources */,
 				1346EB00239275CC005BCD53 /* SudokuTests.swift in Sources */,

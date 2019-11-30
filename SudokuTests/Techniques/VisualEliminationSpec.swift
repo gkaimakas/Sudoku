@@ -19,6 +19,7 @@ class VisualEliminationSpec: QuickSpec {
             it("should change the state of a cell using visual elimination") {
                 let input = "..6.3.7.8.3......12.....6..1..35...6.79.4.15.5...17..4..2.....76......8.4.7.6.2.."
                 let expectedOutput = "..6.3.7.8.3......12.....6..1..35..76.79.4.15.5...17..4..2.....76......8.4.7.6.2.."
+                
                 let inputPuzzle = Puzzle.init(raw: input)
                 
                 let result = Technique.visualElimination.apply(inputPuzzle)

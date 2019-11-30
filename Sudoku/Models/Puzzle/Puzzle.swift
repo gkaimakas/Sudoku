@@ -27,6 +27,10 @@ public struct Puzzle {
     
     let cells: [Cell]
     
+    var solvedCells: [Cell] {
+        cells.filter(\.isSolved)
+    }
+    
     var unsolvedCells: [Cell] {
         cells.filter(\.isNotSolved)
     }
@@ -114,6 +118,22 @@ public struct Puzzle {
         return block
     }
     
+    func row(of cell: Cell) -> Row {
+        guard let row = rows.first(where: { $0.index == cell.position.row }) else {
+            fatalError("Row of cell: \(cell) not found")
+        }
+        
+        return row
+    }
+    
+    func column(of cell: Cell) -> Column {
+        guard let column = columns.first(where: { $0.index == cell.position.column }) else {
+            fatalError("Columns of cell: \(cell) not found")
+        }
+        
+        return column
+    }
+    
     func neighbors(of block: Block) -> [Block] {
         rowNeighbors(of: block) + columnNeighbors(of: block)
     }
@@ -138,6 +158,27 @@ public struct Puzzle {
             .compactMap(\.state.solution)
             .filter { $0 == solution }
             .count
+    }
+    
+    func updateCandidates() -> Puzzle {
+        func candidates(for cell: Cell, block: Block, row: Row, column: Column) -> Cell {
+            let rowSolutions = row.solvedCells.compactMap(\.state.solution).set
+            let columnSolutions = column.solvedCells.compactMap(\.state.solution).set
+            let blockSolutions = block.solvedCells.compactMap(\.state.solution).set
+            
+            let solutions = rowSolutions.union(columnSolutions).union(blockSolutions)
+            let candidates = (1...9).map { $0 }.set.subtracting(solutions).array.sorted()
+            
+            return Cell.Lenses.state.to(.notSolved(candidates: candidates), cell)
+        }
+        
+        let updatedUnsolvedCells = unsolvedCells
+            .map { candidates(for: $0,
+                              block: self.block(of: $0),
+                              row: self.row(of: $0),
+                              column: self.column(of: $0)) }
+        
+        return Puzzle(cells: solvedCells + updatedUnsolvedCells)
     }
 }
 

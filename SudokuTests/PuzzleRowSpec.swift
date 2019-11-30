@@ -25,7 +25,7 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
                     .init(position: .init(row: 0, column: 7), state: .solved(8)),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -43,7 +43,7 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
                     .init(position: .init(row: 0, column: 7), state: .solved(8)),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -62,7 +62,7 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
                     .init(position: .init(row: 0, column: 7), state: .solved(8)),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -80,7 +80,7 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
                     .init(position: .init(row: 0, column: 7), state: .solved(7)),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -98,7 +98,7 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
                     .init(position: .init(row: 0, column: 7), state: .solved(8)),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -115,8 +115,8 @@ class PuzzleRowSpec: QuickSpec {
                     .init(position: .init(row: 0, column: 4), state: .solved(6)),
                     .init(position: .init(row: 0, column: 5), state: .solved(5)),
                     .init(position: .init(row: 0, column: 6), state: .solved(7)),
-                    .init(position: .init(row: 0, column: 7), state: .notSolved),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 7), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)
@@ -126,15 +126,15 @@ class PuzzleRowSpec: QuickSpec {
             
             it("should compute the missing solutions") {
                 let cells: [Cell] = [
-                    .init(position: .init(row: 0, column: 0), state: .notSolved),
+                    .init(position: .init(row: 0, column: 0), state: .notSolved(candidates: [])),
                     .init(position: .init(row: 0, column: 1), state: .solved(5)),
-                    .init(position: .init(row: 0, column: 2), state: .notSolved),
-                    .init(position: .init(row: 0, column: 3), state: .notSolved),
-                    .init(position: .init(row: 0, column: 4), state: .notSolved),
-                    .init(position: .init(row: 0, column: 5), state: .notSolved),
-                    .init(position: .init(row: 0, column: 6), state: .notSolved),
-                    .init(position: .init(row: 0, column: 7), state: .notSolved),
-                    .init(position: .init(row: 0, column: 8), state: .notSolved),
+                    .init(position: .init(row: 0, column: 2), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 3), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 4), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 5), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 6), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 7), state: .notSolved(candidates: [])),
+                    .init(position: .init(row: 0, column: 8), state: .notSolved(candidates: [])),
                 ]
                 
                 let row = Puzzle.Row(index: .init(0), cells: cells)

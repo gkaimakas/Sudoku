@@ -14,8 +14,13 @@ public struct Cell {
     
     public let isSolved: Bool
     public let isNotSolved: Bool
+    public var isLoneSingle: Bool {
+        state.candidates?.count == 1
+    }
     
-    init(position: CellPosition, state: State) {
+    init(position: CellPosition,
+         state: State) {
+        
         self.position = position
         self.state = state
         self.isSolved = state.isSolved
@@ -26,7 +31,7 @@ public struct Cell {
 public extension Cell {
     enum State {
         case solved(Int)
-        case notSolved
+        case notSolved(candidates: [Int])
         
         var isSolved: Bool {
             solution != nil
@@ -40,6 +45,15 @@ public extension Cell {
                 return nil
             }
         }
+        
+        var candidates: [Int]? {
+            switch self {
+            case let .notSolved(candidates):
+                return candidates.sorted()
+            case _:
+                return nil
+            }
+        }
     }
 }
 
@@ -49,7 +63,7 @@ extension Cell.State {
         case let .some(value):
             return .solved(value)
         case .none:
-            return .notSolved
+            return .notSolved(candidates: [])
         }
     }
 }
