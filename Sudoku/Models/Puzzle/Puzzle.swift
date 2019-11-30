@@ -167,7 +167,8 @@ public struct Puzzle {
             let blockSolutions = block.solvedCells.compactMap(\.state.solution).set
             
             let solutions = rowSolutions.union(columnSolutions).union(blockSolutions)
-            let candidates = (1...9).map { $0 }.set.subtracting(solutions).array.sorted()
+            let currentCandidates = cell.state.candidates ?? (1...9).map { $0 }
+            let candidates = currentCandidates.map { $0 }.set.subtracting(solutions).array.sorted()
             
             return Cell.Lenses.state.to(.notSolved(candidates: candidates), cell)
         }
