@@ -59,6 +59,7 @@
 		1364764123930C4E00DE6D9D /* HiddenSingleRowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364764023930C4E00DE6D9D /* HiddenSingleRowSpec.swift */; };
 		13647643239310BF00DE6D9D /* HiddenSingleColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13647642239310BF00DE6D9D /* HiddenSingleColumn.swift */; };
 		136476452393111D00DE6D9D /* HiddenSingleColumnSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136476442393111D00DE6D9D /* HiddenSingleColumnSpec.swift */; };
+		13647647239316CA00DE6D9D /* HiddenSingleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13647646239316CA00DE6D9D /* HiddenSingleBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		1364764023930C4E00DE6D9D /* HiddenSingleRowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenSingleRowSpec.swift; sourceTree = "<group>"; };
 		13647642239310BF00DE6D9D /* HiddenSingleColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenSingleColumn.swift; sourceTree = "<group>"; };
 		136476442393111D00DE6D9D /* HiddenSingleColumnSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenSingleColumnSpec.swift; sourceTree = "<group>"; };
+		13647646239316CA00DE6D9D /* HiddenSingleBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenSingleBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 				1364763A2392F87300DE6D9D /* NakedSingle.swift */,
 				1364763E239309F500DE6D9D /* ΗiddenSingleRow.swift */,
 				13647642239310BF00DE6D9D /* HiddenSingleColumn.swift */,
+				13647646239316CA00DE6D9D /* HiddenSingleBlock.swift */,
 			);
 			path = Techniques;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */,
 				1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */,
 				1346EAE9239275CB005BCD53 /* AppDelegate.swift in Sources */,
+				13647647239316CA00DE6D9D /* HiddenSingleBlock.swift in Sources */,
 				1346EB1A239275E6005BCD53 /* Cell.swift in Sources */,
 				1346EB24239277AA005BCD53 /* Pipe.swift in Sources */,
 				1346EB34239282BD005BCD53 /* CellView.swift in Sources */,

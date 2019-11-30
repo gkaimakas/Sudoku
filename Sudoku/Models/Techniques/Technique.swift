@@ -29,6 +29,7 @@ extension Technique {
         case nakedSingle
         case hiddenSingleRow
         case hiddenSingleColumn
+        case hiddenSingleBlock
         case nakedPairs
         case nakedTriplets
         case nakedQuads
