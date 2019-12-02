@@ -14,7 +14,7 @@ extension Array where Element: Hashable {
     }
 }
 
-extension Array where Element == Puzzle.Block {
+extension Array where Element == Block {
     func instancesOf(solution: Int) -> [Cell] {
         flatMap { $0.solvedCells }
             .filter { $0.state.solution == solution }

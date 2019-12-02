@@ -6,8 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-extension Technique {
-    public static var openSingleColumn: Technique {
+extension SolutionStrategy {
+    public static var openSingleColumn: SolutionStrategy {
         .init(name: .openSingle(.column)) { puzzle in
             
             if let column = puzzle.columns.first(\.isOpenSingle),

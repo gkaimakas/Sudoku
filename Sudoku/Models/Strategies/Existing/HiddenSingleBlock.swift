@@ -6,8 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-extension Technique {
-    public static var hiddenSingleBlock: Technique {
+extension SolutionStrategy {
+    public static var hiddenSingleBlock: SolutionStrategy {
         .init(name: .hiddenSingle(.block)) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
             

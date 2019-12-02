@@ -6,8 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-extension Technique {
-    public static var visualElimination: Technique {
+extension SolutionStrategy {
+    public static var visualElimination: SolutionStrategy {
         .init(name: .visualElimination) { puzzle in
             for cell in puzzle.unsolvedCells {
                 let block = puzzle.block(of: cell)

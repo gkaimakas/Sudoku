@@ -7,11 +7,11 @@
 //
 
 public enum SolutionName {
-    case openSingle(TechniqueContainer)
+    case openSingle(SolutionContainer)
     case visualElimination
-    case hiddenSingle(TechniqueContainer)
+    case hiddenSingle(SolutionContainer)
     case nakedSingle
-    case nakedPair(TechniqueContainer)
+    case nakedPair(SolutionContainer)
     //        case nakedTriplet
     //        case nakedQuad
     //        case omission

@@ -6,8 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-extension Technique {
-    public static var nakedSingle: Technique {
+extension SolutionStrategy {
+    public static var nakedSingle: SolutionStrategy {
         .init(name: .nakedSingle) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
             let loneSingles = updatedPuzzle.unsolvedCells.filter(\.isLoneSingle)

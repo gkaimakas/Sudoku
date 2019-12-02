@@ -6,8 +6,8 @@
 //  Copyright © 2019 George Kaimakas. All rights reserved.
 //
 
-extension Technique {
-    public static var openSingleRow: Technique {
+extension SolutionStrategy {
+    public static var openSingleRow: SolutionStrategy {
         .init(name: .openSingle(.row)) { puzzle in
             if let row = puzzle.rows.first(\.isOpenSingle),
                 let cell = row.unsolvedCells.first,
