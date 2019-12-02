@@ -11,25 +11,25 @@ import SwiftUI
 struct PuzzleView: View {
     var body: some View {
         GeometryReader { proxy in
-            VStack {
-                HStack {
+            VStack(alignment: .center, spacing: 2) {
+                HStack(alignment: .center, spacing: 2) {
                     BlockView()
                     BlockView()
                     BlockView()
                 }
-                HStack {
+                HStack(alignment: .center, spacing: 2) {
                     BlockView()
                     BlockView()
                     BlockView()
                 }
-                HStack {
+                HStack(alignment: .center, spacing: 2) {
                     BlockView()
                     BlockView()
                     BlockView()
                 }
             }
-            .frame(width: proxy.size.width,
-                   height: proxy.size.width,
+            .frame(width: proxy.size.min,
+                   height: proxy.size.min,
                    alignment: .center)
         }
     }

@@ -9,21 +9,6 @@
 import Foundation
 
 public struct Puzzle {
-    static func decode(raw: String) -> [Cell] {
-        raw
-            .components(maxLength: 9)
-            .enumerated()
-            .flatMap { (rowIndex, rowValues) -> [Cell] in
-                rowValues
-                    .map(String.init >>> Int.init)
-                    .enumerated()
-                    .map { columnIndex, value -> Cell in
-                        .init(position: .init(row: rowIndex, column: columnIndex),
-                              state: .decode(raw: value))
-                }
-                
-        }
-    }
     
     let cells: [Cell]
     
@@ -44,6 +29,7 @@ public struct Puzzle {
                 let cells = self.cells.filter { $0.position.row == row }
                 return Row(index: .init(row), cells: cells)
         }
+        
     }
     
     var columns: [Column] {
@@ -194,5 +180,23 @@ extension Puzzle: CustomStringConvertible {
         cells
             .map { $0.state.solution != nil ? "\($0.state.solution!)" : "." }
             .joined()
+    }
+}
+
+extension Puzzle {
+    static func decode(raw: String) -> [Cell] {
+        raw
+            .components(maxLength: 9)
+            .enumerated()
+            .flatMap { (rowIndex, rowValues) -> [Cell] in
+                rowValues
+                    .map(String.init >>> Int.init)
+                    .enumerated()
+                    .map { columnIndex, value -> Cell in
+                        .init(position: .init(row: rowIndex, column: columnIndex),
+                              state: .decode(raw: value))
+                }
+                
+        }
     }
 }

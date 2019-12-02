@@ -11,25 +11,25 @@ import SwiftUI
 struct BlockView: View {
     var body: some View {
         GeometryReader { proxy in
-            VStack(alignment: .center, spacing: 2) {
-                HStack(alignment: .center, spacing: 2) {
+            VStack(alignment: .center, spacing: 1) {
+                HStack(alignment: .center, spacing: 1) {
                     CellView()
                     CellView()
                     CellView()
                 }
-                HStack(alignment: .center, spacing: 2) {
+                HStack(alignment: .center, spacing: 1) {
                     CellView()
                     CellView()
                     CellView()
                 }
-                HStack(alignment: .center, spacing: 2) {
+                HStack(alignment: .center, spacing: 1) {
                     CellView()
                     CellView()
                     CellView()
                 }
             }
-            .frame(width: proxy.size.width,
-                   height: proxy.size.width,
+            .frame(width: proxy.size.min,
+                   height: proxy.size.min,
                    alignment: .center)
         }
     }

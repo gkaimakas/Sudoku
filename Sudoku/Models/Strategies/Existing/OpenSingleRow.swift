@@ -8,7 +8,7 @@
 
 extension Technique {
     public static var openSingleRow: Technique {
-        .init(name: .openSingleRow) { puzzle in
+        .init(name: .openSingle(.row)) { puzzle in
             if let row = puzzle.rows.first(\.isOpenSingle),
                 let cell = row.unsolvedCells.first,
                 let solution = row.missingSolutions.first {

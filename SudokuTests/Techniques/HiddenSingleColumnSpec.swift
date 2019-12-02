@@ -22,11 +22,11 @@ class HiddenSingleColumnSpec: QuickSpec {
                 
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.hiddenSingleColumn.apply(inputPuzzle)
+                let result = SolutionStrategy.hiddenSingleColumn.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 if let result = result {
-                    expect(result.technique.name).to(equal(.hiddenSingleColumn))
+                    expect(result.technique.name).to(equal(.hiddenSingle(.column)))
                     expect(result.newPuzzle.description).to(equal(expectedOutput))
                     expect(result.position).to(equal(CellPosition(row: 1, column: 2)))
                 }

@@ -8,7 +8,7 @@
 
 extension Technique {
     public static var hiddenSingleColumn: Technique {
-        .init(name: .hiddenSingleColumn) { puzzle in
+        .init(name: .hiddenSingle(.column)) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
             
             if let (solution, cell) = updatedPuzzle.columns.filter(\.isNotSolved).filter(\.isHiddenSingle).first?.hiddenSingle {

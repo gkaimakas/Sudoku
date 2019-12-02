@@ -22,7 +22,7 @@ class LoneSinglesSpec: QuickSpec {
                 
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.nakedSingle.apply(inputPuzzle)
+                let result = SolutionStrategy.nakedSingle.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 if let result = result {

@@ -30,8 +30,8 @@ struct CellView: View {
     var body: some View {
         GeometryReader { proxy in
             Text(self.value)
-                .frame(width: proxy.size.width,
-                   height: proxy.size.width,
+                .frame(width: proxy.size.min,
+                   height: proxy.size.min,
                    alignment: .center)
             .background(
                 RoundedRectangle(cornerRadius: 8, style: .circular)

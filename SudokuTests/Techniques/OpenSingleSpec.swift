@@ -21,11 +21,11 @@ class OpenSingleSpec: QuickSpec {
                 let expectedOutput = "1234567894567891237.91.3456912345678345678912678912345234567891567891234891234567"
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.openSingleRow.apply(inputPuzzle)
+                let result = SolutionStrategy.openSingleRow.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 if let result = result {
-                    expect(result.technique.name).to(equal(.openSingleRow))
+                    expect(result.technique.name).to(equal(.openSingle(.row)))
                     expect(result.oldPuzzle).to(equal(inputPuzzle))
                     expect(result.newPuzzle.description).to(equal(expectedOutput))
                     expect(result.position).to(equal(CellPosition(row: 1, column: 1)))
@@ -39,12 +39,12 @@ class OpenSingleSpec: QuickSpec {
                 let expectedOutput = "12345678.4567891237.912345.9.234567.345678912678912345234567891567891234891234567"
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.openSingleColumn.apply(inputPuzzle)
+                let result = SolutionStrategy.openSingleColumn.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 expect(inputPuzzle.description).to(equal(input))
                 if let result = result {
-                    expect(result.technique.name).to(equal(.openSingleColumn))
+                    expect(result.technique.name).to(equal(.openSingle(.column)))
                     expect(result.oldPuzzle).to(equal(inputPuzzle))
                     expect(result.newPuzzle.description).to(equal(expectedOutput))
                     expect(result.position).to(equal(CellPosition(row: 0, column: 2)))
@@ -59,12 +59,12 @@ class OpenSingleSpec: QuickSpec {
                 let expectedOutput = "12345678.4567891.37891234..9..34567.345678912678912345234567891567891234891234567"
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.openSingleBlock.apply(inputPuzzle)
+                let result = SolutionStrategy.openSingleBlock.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 expect(inputPuzzle.description).to(equal(input))
                 if let result = result {
-                    expect(result.technique.name).to(equal(.openSingleBlock))
+                    expect(result.technique.name).to(equal(.openSingle(.block)))
                     expect(result.oldPuzzle).to(equal(inputPuzzle))
                     expect(result.newPuzzle.description).to(equal(expectedOutput))
                     expect(result.position).to(equal(CellPosition(row: 0, column: 2)))

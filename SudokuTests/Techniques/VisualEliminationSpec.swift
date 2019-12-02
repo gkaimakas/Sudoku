@@ -22,7 +22,7 @@ class VisualEliminationSpec: QuickSpec {
                 
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.visualElimination.apply(inputPuzzle)
+                let result = SolutionStrategy.visualElimination.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 if let result = result {

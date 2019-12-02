@@ -1,5 +1,5 @@
 //
-//  HiddenSingle.swift
+//  HiddenSingleBlock.swift
 //  Sudoku
 //
 //  Created by George Kaimakas on 30/11/19.
@@ -7,11 +7,11 @@
 //
 
 extension Technique {
-    public static var hiddenSingleRow: Technique {
-        .init(name: .hiddenSingleRow) { puzzle in
+    public static var hiddenSingleBlock: Technique {
+        .init(name: .hiddenSingle(.block)) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
             
-            if let (solution, cell) = updatedPuzzle.rows.filter(\.isNotSolved).filter(\.isHiddenSingle).first?.hiddenSingle {
+            if let (solution, cell) = updatedPuzzle.blocks.filter(\.isNotSolved).filter(\.hasHiddenSingles).first?.hiddenSingles.first {
                 
                 let result = Puzzle
                     .Lenses
@@ -20,7 +20,7 @@ extension Technique {
                 
                 return Transformation(old: updatedPuzzle,
                                       new: result.updateCandidates(),
-                                      technique: .hiddenSingleRow,
+                                      technique: .hiddenSingleBlock,
                                       position: cell.position)
             }
             

@@ -9,29 +9,40 @@
 import Foundation
 
 public struct Cell {
+    public static func isSolved(_ x: Self) -> Bool {
+        x.state.isSolved
+    }
+    
+    public static func isNotSolved(_ x: Self) -> Bool {
+        !x.state.isSolved
+    }
+    
+    public static func isLoneSingle(_ x: Self) -> Bool {
+        x.state.candidates?.count == 1
+    }
+    
     public let position: CellPosition
     public let state: State
     
-    public let isSolved: Bool
-    public let isNotSolved: Bool
-    public var isLoneSingle: Bool {
-        state.candidates?.count == 1
-    }
+    public var solution: Int? { self.state.solution }
+    public var candidates: [Int]? { self.state.candidates }
+    
+    public var isSolved: Bool { Self.isSolved(self) }
+    public var isNotSolved: Bool { Self.isNotSolved(self) }
+    public var isLoneSingle: Bool { Self.isLoneSingle(self) }
     
     init(position: CellPosition,
          state: State) {
         
         self.position = position
         self.state = state
-        self.isSolved = state.isSolved
-        self.isNotSolved = !state.isSolved
     }
 }
 
 public extension Cell {
     enum State {
         case solved(Int)
-        case notSolved(candidates: [Int])
+        case notSolved(candidates: [Int]?)
         
         var isSolved: Bool {
             solution != nil
@@ -49,7 +60,7 @@ public extension Cell {
         var candidates: [Int]? {
             switch self {
             case let .notSolved(candidates):
-                return candidates.sorted()
+                return candidates?.sorted()
             case _:
                 return nil
             }
@@ -63,7 +74,7 @@ extension Cell.State {
         case let .some(value):
             return .solved(value)
         case .none:
-            return .notSolved(candidates: [])
+            return .notSolved(candidates: nil)
         }
     }
 }

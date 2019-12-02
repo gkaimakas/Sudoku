@@ -22,11 +22,11 @@ class HiddenSingleRowSpec: QuickSpec {
                 
                 let inputPuzzle = Puzzle.init(raw: input)
                 
-                let result = Technique.hiddenSingleRow.apply(inputPuzzle)
+                let result = SolutionStrategy.hiddenSingleRow.apply(inputPuzzle)
                 
                 expect(result).toNot(beNil())
                 if let result = result {
-                    expect(result.technique.name).to(equal(.hiddenSingleRow))
+                    expect(result.technique.name).to(equal(.hiddenSingle(.row)))
                     expect(result.newPuzzle.description).to(equal(expectedOutput))
                     expect(result.position).to(equal(CellPosition(row: 6, column: 2)))
                 }

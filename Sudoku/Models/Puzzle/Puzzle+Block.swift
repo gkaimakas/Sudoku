@@ -10,16 +10,20 @@ import Foundation
 
 extension Puzzle {
     public struct Block {
+        public static func isSolved(_ x: Self) -> Bool {
+            x.cells.filter(\.isNotSolved).count == 0
+        }
+        
+        public static func isNotSolved(_ x: Self) -> Bool {
+            x.cells.filter(\.isNotSolved).count != 0
+        }
+        
         public let position: BlockPosition
         public let cells: [Cell]
         
-        public var isSolved: Bool {
-            solvedCells.count == 0
-        }
+        public var isSolved: Bool { Self.isSolved(self) }
         
-        public var isNotSolved: Bool {
-            !isSolved
-        }
+        public var isNotSolved: Bool { Self.isNotSolved(self) }
         
         public var isValidSolution: Bool {
             solvedCells.compactMap(\.state.solution).set.count == solvedCells.compactMap(\.state.solution).count
@@ -29,8 +33,8 @@ extension Puzzle {
             unsolvedCells.count == 1
         }
         
-        public var isHiddenSingle: Bool {
-            hiddenSingle != nil
+        public var hasHiddenSingles: Bool {
+            hiddenSingles.count > 0
         }
         
         public var solvedCells: [Cell] {
@@ -50,25 +54,22 @@ extension Puzzle {
                 .sorted()
         }
         
-        public var hiddenSingle: (Int, Cell)? {
-            var store: [Int: [Cell]] = [:]
-            unsolvedCells
-                .forEach { (cell) in
-                    if let candidates = cell.state.candidates {
-                        candidates
-                            .forEach { candidate in
-                                store[candidate] = (store[candidate] ?? []) + [cell]
-                        }
-                    }
+        public var hiddenSingles: [(Int, Cell)] {
+            unsolvedCells.reduce([Int: [Cell]]()) { store, cell -> [Int: [Cell]] in
+                var store = store
+                cell.candidates?.forEach({ candidate in
+                    store[candidate] = (store[candidate] ?? []) + [cell]
+                })
+                return store
             }
+            .filter { $0.value.count == 1 }
+            .map { ($0.key, $0.value[0]) }
+        }
+        
+        public var nakedPairs: [(Cell, Cell)]? {
+            let unsolvedCells = cells
+                .filter(\.isNotSolved)
             
-            
-            
-            for (key, cells) in store {
-                if cells.count == 1 {
-                    return (key, cells[0])
-                }
-            }
             
             return nil
         }
