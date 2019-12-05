@@ -28,7 +28,6 @@
 		1346EB3623928489005BCD53 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3523928488005BCD53 /* BlockView.swift */; };
 		1346EB382392850C005BCD53 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB372392850C005BCD53 /* PuzzleView.swift */; };
 		1346EB3A23928804005BCD53 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3923928804005BCD53 /* Style.swift */; };
-		1346EB3D23928E30005BCD53 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3C23928E30005BCD53 /* Sequence.swift */; };
 		1346EB4023929222005BCD53 /* RowRowIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB3F23929222005BCD53 /* RowRowIndex.swift */; };
 		1346EB4223929279005BCD53 /* ColumnIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346EB4123929279005BCD53 /* ColumnIndex.swift */; };
 		1346EB5723929FB4005BCD53 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 1346EB5623929FB4005BCD53 /* Quick */; };
@@ -69,6 +68,9 @@
 		13C8457623951E1300ED354A /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8457523951E1300ED354A /* Functional.swift */; };
 		13C8457823954C7E00ED354A /* SolutionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8457723954C7E00ED354A /* SolutionName.swift */; };
 		13C8457B23954D1000ED354A /* SolutionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8457A23954D1000ED354A /* SolutionStrategy.swift */; };
+		13DF6DE62398FB0000A70E6A /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF6DE52398FB0000A70E6A /* Get.swift */; };
+		13DF6DE82398FB8E00A70E6A /* BackwardComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF6DE72398FB8E00A70E6A /* BackwardComposition.swift */; };
+		13DF6DEA2398FBA000A70E6A /* ReverseChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DF6DE92398FBA000A70E6A /* ReverseChain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +118,6 @@
 		1346EB3523928488005BCD53 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		1346EB372392850C005BCD53 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		1346EB3923928804005BCD53 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		1346EB3C23928E30005BCD53 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		1346EB3F23929222005BCD53 /* RowRowIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowRowIndex.swift; sourceTree = "<group>"; };
 		1346EB4123929279005BCD53 /* ColumnIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnIndex.swift; sourceTree = "<group>"; };
 		1346EB662392A061005BCD53 /* SudokuParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuParserSpec.swift; sourceTree = "<group>"; };
@@ -153,6 +154,9 @@
 		13C8457523951E1300ED354A /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		13C8457723954C7E00ED354A /* SolutionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionName.swift; sourceTree = "<group>"; };
 		13C8457A23954D1000ED354A /* SolutionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionStrategy.swift; sourceTree = "<group>"; };
+		13DF6DE52398FB0000A70E6A /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
+		13DF6DE72398FB8E00A70E6A /* BackwardComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardComposition.swift; sourceTree = "<group>"; };
+		13DF6DE92398FBA000A70E6A /* ReverseChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseChain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 				13C8456C23950B5D00ED354A /* Filter.swift */,
 				13C8456E23950BBD00ED354A /* Flip.swift */,
 				13C8457523951E1300ED354A /* Functional.swift */,
+				13DF6DE52398FB0000A70E6A /* Get.swift */,
+				13DF6DE92398FBA000A70E6A /* ReverseChain.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -293,7 +299,6 @@
 		1346EB3B23928E26005BCD53 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1346EB3C23928E30005BCD53 /* Sequence.swift */,
 				1346EB682392A165005BCD53 /* String.swift */,
 				1346EB702392B5CE005BCD53 /* Array.swift */,
 				1346EB722392B5EC005BCD53 /* Set.swift */,
@@ -362,6 +367,7 @@
 				1346EB2523927845005BCD53 /* ForwardApplication.swift */,
 				1346EB29239278AD005BCD53 /* ForwardComposition.swift */,
 				13C8457023950E9E00ED354A /* SingleTypeComposition.swift */,
+				13DF6DE72398FB8E00A70E6A /* BackwardComposition.swift */,
 			);
 			path = "Precedence Groups";
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 				1346EB3623928489005BCD53 /* BlockView.swift in Sources */,
 				1346EB2623927845005BCD53 /* ForwardApplication.swift in Sources */,
 				13C8456D23950B5D00ED354A /* Filter.swift in Sources */,
+				13DF6DE82398FB8E00A70E6A /* BackwardComposition.swift in Sources */,
 				1346EB7E2392D130005BCD53 /* BlockPosition.swift in Sources */,
 				1346EAE9239275CB005BCD53 /* AppDelegate.swift in Sources */,
 				13C8457823954C7E00ED354A /* SolutionName.swift in Sources */,
@@ -549,7 +556,6 @@
 				1346EB1A239275E6005BCD53 /* Cell.swift in Sources */,
 				1346EB24239277AA005BCD53 /* Pipe.swift in Sources */,
 				1346EB34239282BD005BCD53 /* CellView.swift in Sources */,
-				1346EB3D23928E30005BCD53 /* Sequence.swift in Sources */,
 				1346EB8A2392E0E5005BCD53 /* Puzzle+Lenses.swift in Sources */,
 				136476392392F7BC00DE6D9D /* OpenSingleBlock.swift in Sources */,
 				1346EB1F23927610005BCD53 /* Puzzle.swift in Sources */,
@@ -563,6 +569,7 @@
 				1346EAEB239275CB005BCD53 /* SceneDelegate.swift in Sources */,
 				13C84569239507F300ED354A /* CGSize.swift in Sources */,
 				13647643239310BF00DE6D9D /* HiddenSingleColumn.swift in Sources */,
+				13DF6DE62398FB0000A70E6A /* Get.swift in Sources */,
 				1346EB2823927881005BCD53 /* Chain.swift in Sources */,
 				13C8457123950E9E00ED354A /* SingleTypeComposition.swift in Sources */,
 				1346EB3A23928804005BCD53 /* Style.swift in Sources */,
@@ -573,6 +580,7 @@
 				1346EB4023929222005BCD53 /* RowRowIndex.swift in Sources */,
 				13C8457623951E1300ED354A /* Functional.swift in Sources */,
 				1364763B2392F87300DE6D9D /* NakedSingle.swift in Sources */,
+				13DF6DEA2398FBA000A70E6A /* ReverseChain.swift in Sources */,
 				1346EAED239275CB005BCD53 /* ContentView.swift in Sources */,
 				1346EB732392B5EC005BCD53 /* Set.swift in Sources */,
 				1346EB7A2392BFE9005BCD53 /* Lens.swift in Sources */,

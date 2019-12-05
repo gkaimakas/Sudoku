@@ -10,7 +10,7 @@ extension SolutionStrategy {
     public static var openSingleBlock: SolutionStrategy {
         .init(name: .openSingle(.block)) { puzzle in
             
-            if let block = puzzle.blocks.first(\.isOpenSingle),
+            if let block = puzzle.blocks.filter(get(\.isOpenSingle)).first,
                 let cell = block.unsolvedCells.first,
                 let solution = block.missingSolutions.first {
                 

@@ -11,7 +11,7 @@ extension SolutionStrategy {
         .init(name: .hiddenSingle(.block)) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
             
-            if let (solution, cell) = updatedPuzzle.blocks.filter(\.isNotSolved).filter(\.hasHiddenSingles).first?.hiddenSingles.first {
+            if let (solution, cell) = updatedPuzzle.blocks.filter(get(\.isNotSolved)).filter(get(\.hasHiddenSingles)).first?.hiddenSingles.first {
                 
                 let result = Puzzle
                     .Lenses

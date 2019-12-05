@@ -13,15 +13,15 @@ public struct Puzzle {
     let cells: [Cell]
     
     var solvedCells: [Cell] {
-        cells.filter(\.isSolved)
+        cells.filter(get(\.isSolved))
     }
     
     var unsolvedCells: [Cell] {
-        cells.filter(\.isNotSolved)
+        cells.filter((!) <<< get(\.isSolved))
     }
     
     var rows: [Row] {
-        cells.map(\.position.row.value)
+        cells.map(get(\.position.row.value))
             .set
             .array
             .sorted()
@@ -33,7 +33,7 @@ public struct Puzzle {
     }
     
     var columns: [Column] {
-        cells.map(\.position.column.value)
+        cells.map(get(\.position.column.value))
             .set
             .array
             .sorted()
@@ -140,17 +140,17 @@ public struct Puzzle {
     
     func instancesOf(solution: Int) -> Int {
         cells
-            .filter(\.isSolved)
-            .compactMap(\.state.solution)
+            .filter(get(\.isSolved))
+            .compactMap(get(\.state.solution))
             .filter { $0 == solution }
             .count
     }
     
     func updateCandidates() -> Puzzle {
         func candidates(for cell: Cell, block: Block, row: Row, column: Column) -> Cell {
-            let rowSolutions = row.solvedCells.compactMap(\.state.solution).set
-            let columnSolutions = column.solvedCells.compactMap(\.state.solution).set
-            let blockSolutions = block.solvedCells.compactMap(\.state.solution).set
+            let rowSolutions = row.solvedCells.compactMap(get(\.state.solution)).set
+            let columnSolutions = column.solvedCells.compactMap(get(\.state.solution)).set
+            let blockSolutions = block.solvedCells.compactMap(get(\.state.solution)).set
             
             let solutions = rowSolutions.union(columnSolutions).union(blockSolutions)
             let currentCandidates = cell.state.candidates ?? (1...9).map { $0 }

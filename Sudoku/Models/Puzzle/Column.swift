@@ -19,12 +19,12 @@ public struct Column {
     }
     
     public var isValidColumn: Bool {
-        cells.map(\.position.column.value)
+        cells.map(get(\.position.column.value))
             .reduce(true, { $0 && $1 == index.value })
     }
     
     public var isValidSolution: Bool {
-        solvedCells.compactMap(\.state.solution).set.count == solvedCells.compactMap(\.state.solution).count
+        solvedCells.compactMap(get(\.state.solution)).set.count == solvedCells.compactMap(get(\.state.solution)).count
     }
     
     public var isOpenSingle: Bool {
@@ -36,17 +36,17 @@ public struct Column {
     }
     
     public var solvedCells: [Cell] {
-        cells.filter(\.isSolved)
+        cells.filter(get(\.isSolved))
     }
     public var unsolvedCells: [Cell] {
-        cells.filter(\.isNotSolved)
+        cells.filter((!) <<< get(\.isSolved))
     }
     
     public var missingSolutions: [Int] {
         (1...9)
-            .map(\.self)
+            .map(get(\.self))
             .set
-            .subtracting(cells.compactMap(\.state.solution).set)
+            .subtracting(cells.compactMap(get(\.state.solution)).set)
             .array
             .sorted()
     }

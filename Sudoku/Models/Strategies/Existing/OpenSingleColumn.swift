@@ -10,7 +10,7 @@ extension SolutionStrategy {
     public static var openSingleColumn: SolutionStrategy {
         .init(name: .openSingle(.column)) { puzzle in
             
-            if let column = puzzle.columns.first(\.isOpenSingle),
+            if let column = puzzle.columns.filter(get(\.isOpenSingle)).first,
                 let cell = column.unsolvedCells.first,
                 let solution = column.missingSolutions.first {
                 

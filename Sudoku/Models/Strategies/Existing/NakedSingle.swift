@@ -10,7 +10,7 @@ extension SolutionStrategy {
     public static var nakedSingle: SolutionStrategy {
         .init(name: .nakedSingle) { puzzle in
             let updatedPuzzle = puzzle.updateCandidates()
-            let loneSingles = updatedPuzzle.unsolvedCells.filter(\.isLoneSingle)
+            let loneSingles = updatedPuzzle.unsolvedCells.filter(get(\.isLoneSingle))
             
             if let cell = loneSingles.first,
                 let solution = cell.state.candidates?.first {
